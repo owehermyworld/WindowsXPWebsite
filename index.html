@@ -34,10 +34,10 @@
 
         .modal-content {
             background-color: #fefefe;
-            margin: auto;
+            margin: 5% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 80%; 
         }
 
         .close {
@@ -86,11 +86,53 @@
         Desktop (Reload)
     </div>
 
-    <!-- Add other icons similarly -->
-
-    <!-- Windows Media Player Icon -->
     <div class="icon">
-        <a href="#" id="mediaPlayerBtn"><img class="icon" src="img/Windows-Media-Player-icon.png"></a><br />
+        <a href="https://www.youtube.com/@nointerestclub"><img class="icon" src="img/YT.svg"></a><br />
+        YouTube
+    </div>
+
+    <div class="icon">
+        <a href="https://discord.gg/qZyFsaPG"><img class="shortcut" src="img/Shortcut.png"><img class="icon" src="img/91_Discord-512.png"></a><br />
+        Discord
+    </div>
+
+    <div class="icon">
+        <a href="mailto:nointerestclub@gmail.com"><img class="shortcut" src="img/Shortcut.png"><img class="icon" src="img/mail.png"></a><br />
+        Email Me
+    </div>
+
+    <div class="icon">
+        <a href="https://www.nointerestclub.store/"><img class="shortcut" src="img/Shortcut.png"><img class="icon" src="img/frutigershop.webp"></a><br />
+        Store
+    </div>
+
+    <div class="icon">
+        <a href="https://steamcommunity.com/id/"><img class="shortcut" src="img/Shortcut.png"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/768px-Steam_icon_logo.svg.png"></a><br />
+        Steam Profile
+    </div>
+
+    <div class="icon">
+        <a href="https://steamcommunity.com/"><img class="shortcut" src="img/Shortcut.png"><img the icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/768px-Steam_icon_logo.svg.png"></a><br />
+        Steam Trade URL
+    </div>
+
+    <div class="icon">
+        <a href="https://open.spotify.com/"><img the "shortcut" src="img/Shortcut.png"><img the "icon" src="img/LimeWire.png"></a><br />
+        Limewire
+    </div>
+
+    <div class="icon">
+        <a href="https://twitter.com/"><img the "shortcut" src="img/Shortcut.png"><img the "icon" src="img/TWITTER.png"></a><br />
+        Twitter
+    </div>
+
+    <div class="icon">
+        <a href="https://paypal.me/"><img the "shortcut" src="img/Shortcut.png"><img the "icon" src="img/STAR.png"></a><br />
+        DONATE
+    </div>
+
+    <div class="icon">
+        <a href="#" id="mediaPlayerBtn"><img the "shortcut" src="img/Shortcut.png"><img the "icon" src="img/Windows-Media-Player-icon.png"></a><br />
         Windows Media Player
     </div>
 
@@ -98,7 +140,7 @@
     <div id="mediaPlayerModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <video id="my-video" class="video-js" controls preload="auto" width="640" height="264">
+            <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
                 <source src="path/to/your/video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -106,26 +148,18 @@
     </div>
 
     <script>
-        // Get the modal
         var modal = document.getElementById("mediaPlayerModal");
-
-        // Get the button that opens the modal
         var btn = document.getElementById("mediaPlayerBtn");
-
-        // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks the button, open the modal 
         btn.onclick = function() {
             modal.style.display = "block";
         }
 
-        // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
         }
 
-        // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
