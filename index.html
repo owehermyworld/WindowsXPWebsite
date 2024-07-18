@@ -56,21 +56,52 @@
             margin: 5% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 600px;
+            height: 400px;
+            background: #f0f0f0;
+        }
+
+        .modal-header {
+            background: #0078d7;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-body {
+            padding: 20px;
+            text-align: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-footer {
+            background: #0078d7;
+            color: #fff;
+            padding: 10px;
+            text-align: right;
         }
 
         .close {
-            color: #aaa;
+            color: #fff;
             float: right;
             font-size: 28px;
             font-weight: bold;
+            cursor: pointer;
         }
 
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
+        .toolbar {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .toolbar img {
+            margin: 0 5px;
         }
 
         .blank {
@@ -135,6 +166,10 @@
     <div class="icon">
         <a href="https://www.youtube.com/watch?v=UsyyW4OM1KE&t=411s"><img class="shortcut" src="img/Shortcut.png"><img class="icon" src="img/CD.png"></a><br />
         gatvideo (2) - Copy
+    </div>
+    <div class="icon">
+        <a href="#" id="pictureViewerBtn"><img class="shortcut" src="img/Shortcut.png"><img class="icon" src="img/picture-viewer-icon.png"></a><br />
+        Picture Viewer
     </div>
 
     <!-- Third Row -->
@@ -241,6 +276,30 @@
         </div>
     </div>
 
+    <!-- The Picture Viewer Modal -->
+    <div id="pictureViewerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closePictureViewer">&times;</span>
+                <span>smxd_c.ico - Windows Picture and Fax Viewer</span>
+            </div>
+            <div class="modal-body">
+                <span>No preview available.</span>
+            </div>
+            <div class="modal-footer">
+                <div class="toolbar">
+                    <img src="img/prev.png" alt="Previous">
+                    <img src="img/play.png" alt="Play">
+                    <img src="img/next.png" alt="Next">
+                    <img src="img/zoom-in.png" alt="Zoom In">
+                    <img src="img/zoom-out.png" alt="Zoom Out">
+                    <img src="img/delete.png" alt="Delete">
+                    <img src="img/info.png" alt="Info">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         var modal = document.getElementById("mediaPlayerModal");
         var btn = document.getElementById("mediaPlayerBtn");
@@ -257,6 +316,25 @@
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+            }
+        }
+
+        // Picture Viewer Modal
+        var pictureViewerModal = document.getElementById("pictureViewerModal");
+        var pictureViewerBtn = document.getElementById("pictureViewerBtn");
+        var closePictureViewer = document.getElementById("closePictureViewer");
+
+        pictureViewerBtn.onclick = function() {
+            pictureViewerModal.style.display = "block";
+        }
+
+        closePictureViewer.onclick = function() {
+            pictureViewerModal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == pictureViewerModal) {
+                pictureViewerModal.style.display = "none";
             }
         }
     </script>
