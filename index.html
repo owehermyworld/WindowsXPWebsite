@@ -10,9 +10,6 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <title>N.I.C Desktop</title>
-    <style>
-        /* Include the CSS provided above */
-    </style>
 </head>
 <body>
     <!-- First Row -->
@@ -185,67 +182,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Media Player Modal
-        var modal = document.getElementById("mediaPlayerModal");
-        var btn = document.getElementById("mediaPlayerBtn");
-        var span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        // Picture Viewer Modal
-        var pictureViewerModal = document.getElementById("pictureViewerModal");
-        var pictureViewerBtn = document.getElementById("pictureViewerBtn");
-        var closePictureViewer = document.getElementById("closePictureViewer");
-
-        pictureViewerBtn.onclick = function() {
-            pictureViewerModal.style.display = "block";
-        }
-
-        closePictureViewer.onclick = function() {
-            pictureViewerModal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == pictureViewerModal) {
-                pictureViewerModal.style.display = "none";
-            }
-        }
-
-        // Make the Picture Viewer Modal draggable
-        var header = document.getElementById("pictureViewerHeader");
-        var isDragging = false;
-        var offsetX, offsetY;
-
-        header.onmousedown = function(e) {
-            isDragging = true;
-            offsetX = e.clientX - pictureViewerModal.offsetLeft;
-            offsetY = e.clientY - pictureViewerModal.offsetTop;
-            document.onmousemove = function(e) {
-                if (isDragging) {
-                    pictureViewerModal.style.left = (e.clientX - offsetX) + 'px';
-                    pictureViewerModal.style.top = (e.clientY - offsetY) + 'px';
-                }
-            }
-            document.onmouseup = function() {
-                isDragging = false;
-                document.onmousemove = null;
-                document.onmouseup = null;
-            }
-        }
-    </script>
 </body>
 </html>
