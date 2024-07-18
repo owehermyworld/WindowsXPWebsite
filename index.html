@@ -1,111 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style type="text/css">
-        .fade-in {
-            -webkit-animation: fadeIn 2s ease;
-            -moz-animation: fadeIn ease-in-out 2s both;
-            -ms-animation: fadeIn ease-in-out 2s both;
-            -o-animation: fadeIn ease-in-out 2s both;
-            animation: fadeIn 2s ease;
-            visibility: visible;
-            -webkit-backface-visibility: hidden;
-        }
-
-        @-webkit-keyframes fadeIn {0% {opacity:0;} 100% {opacity:1;}}
-        @-moz-keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
-        @-o-keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
-        @keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
-
-        .icon {
-            min-width: 108px;
-            padding: 11px;
-            display: inline-block;
-            text-align: center;
-            font-family: Tahoma, Arial, Helvetica Neue, Helvetica, sans-serif;
-            font-size: 12px;
-            color: white;
-            text-shadow: 2px 2px 2px black;
-            font-smooth: never;
-            -webkit-font-smoothing : none;
-            vertical-align: top;
-        }
-
-        img.icon {
-            width: 50px;
-            height: auto;
-            padding: 6px;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 600px;
-            height: 400px;
-            overflow: auto;
-            border: 2px solid #000;
-            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-            background: #f0f0f0;
-        }
-
-        .modal-header {
-            background: #0078d7;
-            color: #fff;
-            padding: 5px;
-            cursor: move;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .modal-body {
-            padding: 20px;
-            text-align: center;
-            height: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-footer {
-            background: #0078d7;
-            color: #fff;
-            padding: 5px;
-            text-align: right;
-        }
-
-        .close {
-            color: #fff;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .toolbar {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .toolbar img {
-            margin: 0 5px;
-        }
-
-        .blank {
-            min-width: 108px;
-            padding: 11px;
-            display: inline-block;
-        }
-
-        .icon-row {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-    </style>
     <link rel="stylesheet" href="style.css">
     <script src="jquery.min.js"></script>
     <script src="script.js"></script>
@@ -115,6 +10,9 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <title>N.I.C Desktop</title>
+    <style>
+        /* Include the CSS provided above */
+    </style>
 </head>
 <body>
     <!-- First Row -->
