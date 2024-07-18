@@ -3,6 +3,7 @@ html {
     height: 100%;
     width: 100%;
 }
+
 bodyold {
     height: 100%;
     width: 100%;
@@ -50,6 +51,7 @@ body {
     min-height: 100%;
     width: 100%;
 }
+
 .icon {
     min-width: 108px;
     padding: 11px;
@@ -62,6 +64,7 @@ body {
     font-smooth: never;
     -webkit-font-smoothing : none;    
 }
+
 .iconrow {
     position: absolute;
     top: 10px;
@@ -74,11 +77,13 @@ body {
     -ms-user-select: none;
     user-select: none;
 }
+
 .shortcut {
     position: absolute;
     min-width: 58px;
     max-width: 58px;
 }
+
 .container .gallery a img {
     float: left;
     width: 20%;
@@ -91,6 +96,7 @@ body {
     transition: transform .15s ease;
     position: relative;
 }
+
 .container .gallery a:hover img {
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
@@ -99,19 +105,23 @@ body {
     transform: scale(1.05);
     z-index: 5;
 }
+
 .clear {
     clear: both;
     float: none;
     width: 100%;
 }
+
 img.icon {
     min-width: 50px;
     max-width: 50px;
     padding: 6px;
 }
+
 a {
     cursor: default;
 }
+
 .wrapper { 
     height: 100%;
     width: 100%;
@@ -129,45 +139,89 @@ a {
 }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    overflow: auto;
+    border: 2px solid #000;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    background: #f0f0f0;
 }
 
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
+.modal-header {
+    background: #0078d7;
+    color: #fff;
+    padding: 5px;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body {
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* The Close Button */
+.modal-footer {
+    background: #0078d7;
+    color: #fff;
+    padding: 5px;
+    text-align: right;
+}
+
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+    color: #fff;
+    font-size: 20px;
     font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
     cursor: pointer;
 }
+
+.toolbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.toolbar img {
+    margin: 0 5px;
+}
+
+.blank {
+    min-width: 108px;
+    padding: 11px;
+    display: inline-block;
+}
+
+.icon-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.fade-in {
+    -webkit-animation: fadeIn 2s ease;
+    -moz-animation: fadeIn ease-in-out 2s both;
+    -ms-animation: fadeIn ease-in-out 2s both;
+    -o-animation: fadeIn ease-in-out 2s both;
+    animation: fadeIn 2s ease;
+    visibility: visible;
+    -webkit-backface-visibility: hidden;
+}
+
+@-webkit-keyframes fadeIn {0% {opacity:0;} 100% {opacity:1;}}
+@-moz-keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
+@-o-keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
+@keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
 
 .video-js .vjs-control-bar {
     background-color: #333;
