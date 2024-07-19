@@ -1,277 +1,42 @@
-html {
-    margin: 0px;
-    height: 100%;
-    width: 100%;
-}
-
-bodyold {
-    height: 100%;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 1800% 1800%;
-    -webkit-animation: rainbow 18s ease infinite;
-    -z-animation: rainbow 18s ease infinite;
-    -o-animation: rainbow 18s ease infinite;
-    animation: rainbow 18s ease infinite;
-}
-
-@-webkit-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-@-moz-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-@-o-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-@keyframes rainbow { 
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-
 body {
-    background: url('img/bliss.png') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    font-family: Arial, sans-serif;
+    background: url('your-background-image.jpg') no-repeat center center fixed;
     background-size: cover;
-    margin: 0px;
-    min-height: 100%;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
 .icon {
-    min-width: 108px;
-    padding: 11px;
-    display: inline-block;
+    width: 150px;
     text-align: center;
-    font-family: Tahoma, Arial, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 12px;
-    color: white;
-    text-shadow: 2px 2px 2px black;    
-    font-smooth: never;
-    -webkit-font-smoothing : none;    
+    margin: 10px;
 }
 
-.iconrow {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: default;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.icon img {
+    width: 100px;
+    height: 100px;
 }
 
-.shortcut {
-    position: absolute;
-    min-width: 58px;
-    max-width: 58px;
-}
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.container .gallery a img {
-    float: left;
-    width: 20%;
-    height: auto;
-    border: 2px solid #fff;
-    -webkit-transition: -webkit-transform .15s ease;
-    -moz-transition: -moz-transform .15s ease;
-    -o-transition: -o-transform .15s ease;
-    -ms-transition: -ms-transform .15s ease;
-    transition: transform .15s ease;
-    position: relative;
-}
+    .icon {
+        width: 80%;
+        margin: 5px 0;
+    }
 
-.container .gallery a:hover img {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-    z-index: 5;
-}
-
-.clear {
-    clear: both;
-    float: none;
-    width: 100%;
-}
-
-img.icon {
-    min-width: 50px;
-    max-width: 50px;
-    padding: 6px;
-}
-
-a {
-    cursor: default;
-}
-
-.wrapper { 
-    height: 100%;
-    width: 100%;
-    left:0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 1800% 1800%;
-    -webkit-animation: rainbow 18s ease infinite;
-    -z-animation: rainbow 18s ease infinite;
-    -o-animation: rainbow 18s ease infinite;
-    animation: rainbow 18s ease infinite;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 400px;
-    overflow: hidden;
-    border: 2px solid #000;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-    background: #f0f0f0;
-    border-radius: 3px;
-}
-
-.modal-header {
-    background: #0078d7;
-    color: #fff;
-    padding: 5px;
-    cursor: move;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 3px 3px 0 0;
-}
-
-.modal-body {
-    padding: 20px;
-    text-align: center;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
-}
-
-.modal-footer {
-    background: #0078d7;
-    color: #fff;
-    padding: 5px;
-    text-align: right;
-    border-radius: 0 0 3px 3px;
-}
-
-.close {
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.toolbar {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.toolbar img {
-    margin: 0 5px;
-}
-
-.blank {
-    min-width: 108px;
-    padding: 11px;
-    display: inline-block;
-}
-
-.icon-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.fade-in {
-    -webkit-animation: fadeIn 2s ease;
-    -moz-animation: fadeIn ease-in-out 2s both;
-    -ms-animation: fadeIn ease-in-out 2s both;
-    -o-animation: fadeIn ease-in-out 2s both;
-    animation: fadeIn 2s ease;
-    visibility: visible;
-    -webkit-backface-visibility: hidden;
-}
-
-@-webkit-keyframes fadeIn {0% {opacity:0;} 100% {opacity:1;}}
-@-moz-keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
-@-o-keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
-@keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
-
-.video-js .vjs-control-bar {
-    background-color: #333;
-}
-
-.video-js .vjs-play-progress,
-.video-js .vjs-volume-level {
-    background-color: #666;
-}
-
-.video-js .vjs-load-progress {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.video-js .vjs-seek-handle,
-.video-js .vjs-volume-handle {
-    display: none;
-}
-
-#pictureViewerModal .modal-header {
-    background: #4a90e2;
-    color: #fff;
-    padding: 10px;
-    font-size: 16px;
-    font-family: Tahoma, Arial, sans-serif;
-    border-radius: 5px 5px 0 0;
-}
-
-#pictureViewerModal .modal-body {
-    background: #fff;
-    padding: 20px;
-    font-family: Tahoma, Arial, sans-serif;
-    font-size: 14px;
-    text-align: center;
-    overflow: hidden;
-}
-
-#pictureViewerModal .modal-footer {
-    background: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-    border-radius: 0 0 5px 5px;
-}
-
-#pictureViewerModal .toolbar img {
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
+    .icon img {
+        width: 80px;
+        height: 80px;
+    }
 }
