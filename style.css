@@ -23,22 +23,15 @@ body {
     font-family: Tahoma, Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 12px;
     color: white;
-    text-shadow: 2px 2px 2px black;    
+    text-shadow: 2px 2px 2px black;
     font-smooth: never;
     -webkit-font-smoothing: none;
 }
 
-.iconrow {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: default;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.icon-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .shortcut {
@@ -47,47 +40,134 @@ body {
     max-width: 58px;
 }
 
-img.icon {
-    min-width: 50px;
-    max-width: 50px;
-    padding: 6px;
+.blank {
+    min-width: 108px;
+    padding: 11px;
+    display: inline-block;
 }
 
-a {
-    cursor: default;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    border: 2px solid #000;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    background: #f0f0f0;
+    border-radius: 3px;
 }
 
-/* Mobile Styles */
-@media only screen and (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 10px;
-    }
+.modal-header {
+    background: #0078d7;
+    color: #fff;
+    padding: 5px;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px 3px 0 0;
+}
 
-    .icon {
-        min-width: 70px;
-        padding: 5px;
-        margin: 5px;
-        text-align: center;
-    }
+.modal-body {
+    padding: 20px;
+    text-align: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
 
-    .icon img {
-        width: 60px;
-        height: 60px;
-    }
+.modal-footer {
+    background: #0078d7;
+    color: #fff;
+    padding: 5px;
+    text-align: right;
+    border-radius: 0 0 3px 3px;
+}
 
-    .iconrow {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        position: relative;
-    }
+.close {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-    .blank {
-        display: none;
-    }
+.toolbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.toolbar img {
+    margin: 0 5px;
+}
+
+.fade-in {
+    -webkit-animation: fadeIn 2s ease;
+    -moz-animation: fadeIn ease-in-out 2s both;
+    -ms-animation: fadeIn ease-in-out 2s both;
+    -o-animation: fadeIn ease-in-out 2s both;
+    animation: fadeIn 2s ease;
+    visibility: visible;
+    -webkit-backface-visibility: hidden;
+}
+
+@-webkit-keyframes fadeIn {0% {opacity:0;} 100% {opacity:1;}}
+@-moz-keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
+@-o-keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
+@keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
+
+.video-js .vjs-control-bar {
+    background-color: #333;
+}
+
+.video-js .vjs-play-progress,
+.video-js .vjs-volume-level {
+    background-color: #666;
+}
+
+.video-js .vjs-load-progress {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.video-js .vjs-seek-handle,
+.video-js .vjs-volume-handle {
+    display: none;
+}
+
+#pictureViewerModal .modal-header {
+    background: #4a90e2;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Tahoma, Arial, sans-serif;
+    border-radius: 5px 5px 0 0;
+}
+
+#pictureViewerModal .modal-body {
+    background: #fff;
+    padding: 20px;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#pictureViewerModal .modal-footer {
+    background: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+
+#pictureViewerModal .toolbar img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
 }
