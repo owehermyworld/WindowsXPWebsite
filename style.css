@@ -1,243 +1,79 @@
-html {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-}
-
 body {
-    background: url('img/bliss.png') no-repeat center center fixed; 
-    background-size: cover;
+    font-family: Arial, sans-serif;
     margin: 0;
-    min-height: 100%;
-    width: 100%;
-}
-
-.icon {
-    min-width: 80px; /* Adjusted for mobile */
-    padding: 8px; /* Adjusted for mobile */
-    display: inline-block;
-    text-align: center;
-    font-family: Tahoma, Arial, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 14px; /* Adjusted for readability */
-    color: white;
-    text-shadow: 2px 2px 2px black;    
-}
-
-.icon img.icon {
-    max-width: 40px; /* Adjusted for mobile */
-    height: auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .icon-row {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center icons horizontally */
-    gap: 10px; /* Spacing between icons */
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.icon {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.icon a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.icon-image {
+    width: 60px; /* Adjust as needed */
+    height: 60px; /* Adjust as needed */
+}
+
+.icon span {
+    margin-top: 5px;
 }
 
 .blank {
-    display: none; /* Hide blank icons on mobile */
-}
-
-/* Mobile view adjustments */
-@media (max-width: 768px) {
-    .icon {
-        width: 20%; /* Adjusted for mobile layout */
-        margin-bottom: 10px;
-    }
-
-    .icon img.icon {
-        width: 40px; /* Adjusted for mobile */
-        height: auto;
-    }
-
-    .icon-row {
-        padding: 0 10px;
-    }
-
-    .blank {
-        display: none;
-    }
-}
-
-html {
-    margin: 0px;
-    height: 100%;
-    width: 100%;
-}
-
-bodyold {
-    height: 100%;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 1800% 1800%;
-    -webkit-animation: rainbow 18s ease infinite;
-    -z-animation: rainbow 18s ease infinite;
-    -o-animation: rainbow 18s ease infinite;
-    animation: rainbow 18s ease infinite;
-}
-
-@-webkit-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-@-moz-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-@-o-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-@keyframes rainbow { 
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-
-.wrapper { 
-    height: 100%;
-    width: 100%;
-    left:0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 1800% 1800%;
-    -webkit-animation: rainbow 18s ease infinite;
-    -z-animation: rainbow 18s ease infinite;
-    -o-animation: rainbow 18s ease infinite;
-    animation: rainbow 18s ease infinite;
+    width: 60px;
+    height: 60px;
 }
 
 .modal {
     display: none;
     position: fixed;
     z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 400px;
-    overflow: hidden;
-    border: 2px solid #000;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-    background: #f0f0f0;
-    border-radius: 3px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
 
-.modal-header {
-    background: #0078d7;
-    color: #fff;
-    padding: 5px;
-    cursor: move;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 3px 3px 0 0;
-}
-
-.modal-body {
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
     padding: 20px;
-    text-align: center;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
-}
-
-.modal-footer {
-    background: #0078d7;
-    color: #fff;
-    padding: 5px;
-    text-align: right;
-    border-radius: 0 0 3px 3px;
+    border: 1px solid #888;
+    width: 80%;
 }
 
 .close {
-    color: #fff;
-    font-size: 20px;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
 }
 
-.toolbar {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+video {
+    width: 100%;
+    height: auto;
 }
-
-.toolbar img {
-    margin: 0 5px;
-}
-
-#pictureViewerModal .modal-header {
-    background: #4a90e2;
-    color: #fff;
-    padding: 10px;
-    font-size: 16px;
-    font-family: Tahoma, Arial, sans-serif;
-    border-radius: 5px 5px 0 0;
-}
-
-#pictureViewerModal .modal-body {
-    background: #fff;
-    padding: 20px;
-    font-family: Tahoma, Arial, sans-serif;
-    font-size: 14px;
-    text-align: center;
-    overflow: hidden;
-}
-
-#pictureViewerModal .modal-footer {
-    background: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-    border-radius: 0 0 5px 5px;
-}
-
-#pictureViewerModal .toolbar img {
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-}
-
-/* Mobile view adjustments */
-@media (max-width: 768px) {
-    body {
-        background: url('img/bliss.png') no-repeat center center fixed;
-        background-size: cover;
-    }
-
-    .icon {
-        width: 20%; /* Adjusted for mobile layout */
-        margin-bottom: 10px;
-    }
-
-    .icon img.icon {
-        width: 40px; /* Adjusted for mobile */
-        height: auto;
-    }
-
-    .icon-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 0 10px;
-    }
-
-    .blank {
-        display: none;
-    }
-}
-
