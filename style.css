@@ -7,13 +7,17 @@ body {
 
 .icon-row {
     display: flex;
-    justify-content: flex-start; /* Align icons to the start */
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-start; /* Align items at the start of each row */
     margin: 10px 0;
 }
 
 .icon {
-    margin: 0 20px; /* Increase margin for desktop spacing */
+    margin: 0 10px; /* Spacing between icons */
     text-align: center;
+    flex: 1 0 20%; /* Adjust width as needed for desktop */
+    max-width: 120px; /* Prevent icons from getting too large */
 }
 
 .icon a {
@@ -82,5 +86,6 @@ video {
 @media (min-width: 768px) {
     .icon {
         margin: 0 20px; /* Desktop spacing */
+        flex: 1 0 15%; /* Adjust width as needed for desktop */
     }
 }
