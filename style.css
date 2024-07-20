@@ -8,16 +8,16 @@ body {
 .icon-row {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-    justify-content: flex-start; /* Align items to the start */
-    align-items: flex-start; /* Align items at the start of each row */
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Center icons vertically */
     margin: 10px 0;
 }
 
 .icon {
-    margin: 0 10px; /* Spacing between icons */
+    margin: 10px; /* Mobile spacing */
     text-align: center;
-    flex: 1 0 20%; /* Adjust width as needed for desktop */
-    max-width: 120px; /* Prevent icons from getting too large */
+    flex: 1 0 25%; /* Adjust width for mobile */
+    max-width: 80px; /* Prevent icons from getting too large */
 }
 
 .icon a {
