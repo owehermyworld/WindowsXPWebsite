@@ -3,21 +3,18 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url('img/bliss.png'); /* Default background for desktop */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
-.icon-row {
+.icon-container {
     display: flex;
-    flex-wrap: wrap; /* Ensure icons wrap to the next line */
-    justify-content: flex-start; /* Align to the left */
-    margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure spacing between columns */
+    padding: 10px;
 }
 
 .icon {
-    margin: 0 10px;
+    flex: 1 1 150px; /* Ensures icons can grow and shrink but have a minimum size */
+    margin: 10px; /* Adjust spacing between icons */
     text-align: center;
 }
 
@@ -83,9 +80,15 @@ video {
     height: auto;
 }
 
-/* Background for mobile */
-@media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-    body {
-        background-image: url('img/blissmobile.jpq');
+/* Media Queries */
+@media (max-width: 767px) {
+    .icon-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center icons horizontally on mobile */
+    }
+    .icon {
+        margin: 10px 0; /* Mobile spacing */
+        flex: 1 1 80%; /* Adjust width for mobile */
     }
 }
