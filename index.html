@@ -162,100 +162,38 @@
     <div class="icon-row">
         <div class="icon">
             <a href="#">
-                <img class="icon-image" src="https://vignette.wikia.nocookie.net/the-microsoft-windows-xp/images/f/f9/XPIcon.png" alt="My Computer">
-                <span>My Computer</span>
+                <img class="icon-image" src="https://vignette.wikia.nocookie.net/the-microsoft-windows-xp/images/f/f9/XPIcon.png" alt="XP Icon">
+                <span>XP Icon</span>
             </a>
         </div>
         <div class="icon">
             <a href="#">
-                <img class="icon-image" src="img/task-manager-taskmgr-icon-big.png" alt="Task Manager">
-                <span>Task Manager</span>
-            </a>
-        </div>
-        <div class="icon">
-            <a href="#">
-                <img class="icon-image" src="https://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Desktop-Windows-icon.png" alt="Windows XP">
-                <span>Windows XP</span>
-            </a>
-        </div>
-        <div class="icon">
-            <a href="#">
-                <img class="icon-image" src="https://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Desktop-Windows-icon.png" alt="Desktop (Reload)">
-                <span>Desktop (Reload)</span>
+                <img class="icon-image" src="https://vignette.wikia.nocookie.net/the-microsoft-windows-xp/images/f/f9/XPIcon.png" alt="XP Icon">
+                <span>XP Icon</span>
             </a>
         </div>
     </div>
 
-    <div class="icon-row">
-        <div class="icon">
-            <a href="#">
-                <img class="icon-image" src="https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png" alt="icon">
-                <span> </span>
-            </a>
-        </div>
-    </div>
-
-    <!-- Media Player Modal -->
-    <div id="mediaPlayerModal" class="modal">
+    <!-- Modal for Picture Viewer -->
+    <div id="pictureViewerModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <video controls>
-                <source src="path/to/your/video.mp4" type="video/mp4">
+            <video id="pictureViewer" controls>
+                <source src="video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
     </div>
 
-    <!-- Picture Viewer Modal -->
-    <div id="pictureViewerModal" class="modal">
+    <!-- Modal for Media Player -->
+    <div id="mediaPlayerModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img id="modal-img" src="" alt="Picture">
+            <video id="mediaPlayer" controls>
+                <source src="media.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
-    
-    <script>
-        // JavaScript for modals and interactivity
-        $(document).ready(function() {
-            // Media Player Modal
-            var mediaPlayerModal = $('#mediaPlayerModal');
-            var mediaPlayerBtn = $('#mediaPlayerBtn');
-            var mediaPlayerSpan = $('.modal .close');
-
-            mediaPlayerBtn.click(function() {
-                mediaPlayerModal.show();
-            });
-
-            mediaPlayerSpan.click(function() {
-                mediaPlayerModal.hide();
-            });
-
-            $(window).click(function(event) {
-                if ($(event.target).is(mediaPlayerModal)) {
-                    mediaPlayerModal.hide();
-                }
-            });
-
-            // Picture Viewer Modal
-            var pictureViewerModal = $('#pictureViewerModal');
-            var pictureViewerBtn = $('#pictureViewerBtn');
-            var pictureViewerSpan = pictureViewerModal.find('.close');
-
-            pictureViewerBtn.click(function() {
-                pictureViewerModal.show();
-                $('#modal-img').attr('src', 'path/to/your/image.jpg'); // Update with your image path
-            });
-
-            pictureViewerSpan.click(function() {
-                pictureViewerModal.hide();
-            });
-
-            $(window).click(function(event) {
-                if ($(event.target).is(pictureViewerModal)) {
-                    pictureViewerModal.hide();
-                }
-            });
-        });
-    </script>
 </body>
 </html>
