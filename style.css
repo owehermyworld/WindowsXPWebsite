@@ -7,13 +7,12 @@ body {
 
 .icon-row {
     display: flex;
-    justify-content: flex-start; /* Align items to the start (left) */
-    flex-wrap: wrap; /* Allows icons to wrap to the next line if they overflow */
+    justify-content: flex-start; /* Align icons to the start */
     margin: 10px 0;
 }
 
 .icon {
-    margin: 0 10px;
+    margin: 0 20px; /* Increase margin for desktop spacing */
     text-align: center;
 }
 
@@ -77,4 +76,11 @@ body {
 video {
     width: 100%;
     height: auto;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .icon {
+        margin: 0 20px; /* Desktop spacing */
+    }
 }
