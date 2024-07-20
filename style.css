@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url('path/to/bliss.png'); /* Set your background image here */
+    background-image: url('img/bliss.png'); /* Set your background image here */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
