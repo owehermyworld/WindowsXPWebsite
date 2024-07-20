@@ -8,16 +8,14 @@ body {
 .icon-row {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-    justify-content: center; /* Center icons horizontally */
-    align-items: center; /* Center icons vertically */
+    justify-content: flex-start; /* Align icons to the start (left) */
     margin: 10px 0;
 }
 
 .icon {
-    margin: 10px; /* Mobile spacing */
+    margin: 0 10px; /* Original desktop spacing */
     text-align: center;
-    flex: 1 0 25%; /* Adjust width for mobile */
-    max-width: 80px; /* Prevent icons from getting too large */
+    flex: 0 0 auto; /* Allow items to keep their original size */
 }
 
 .icon a {
@@ -83,9 +81,13 @@ video {
 }
 
 /* Media Queries */
-@media (min-width: 768px) {
+@media (max-width: 767px) {
+    .icon-row {
+        justify-content: center; /* Center icons horizontally on mobile */
+    }
     .icon {
-        margin: 0 20px; /* Desktop spacing */
-        flex: 1 0 15%; /* Adjust width as needed for desktop */
+        margin: 10px; /* Mobile spacing */
+        flex: 1 0 25%; /* Adjust width for mobile */
+        max-width: 80px; /* Prevent icons from getting too large */
     }
 }
