@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 10px 0;
+    flex-wrap: wrap;
 }
 
 .icon {
@@ -25,19 +26,21 @@ body {
 }
 
 .icon-image {
-    width: 60px; /* Adjust as needed */
-    height: 60px; /* Adjust as needed */
+    width: 60px; /* Default size */
+    height: 60px; /* Default size */
 }
 
 .icon span {
     margin-top: 5px;
 }
 
+/* Blank space for layout */
 .blank {
     width: 60px;
     height: 60px;
 }
 
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -76,4 +79,37 @@ body {
 video {
     width: 100%;
     height: auto;
+}
+
+/* Desktop Layout */
+@media (min-width: 992px) {
+    .icon-row {
+        flex-wrap: nowrap;
+    }
+
+    .icon {
+        margin: 0 15px;
+    }
+
+    .icon-image {
+        width: 80px; /* Adjust size for desktop */
+        height: 80px; /* Adjust size for desktop */
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 991px) {
+    .icon-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon {
+        margin: 10px 0;
+    }
+
+    .icon-image {
+        width: 60px; /* Adjust size for mobile */
+        height: 60px; /* Adjust size for mobile */
+    }
 }
