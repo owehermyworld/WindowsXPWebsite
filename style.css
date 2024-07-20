@@ -7,13 +7,12 @@ body {
 
 .icon-row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin: 10px 0;
 }
 
 .icon {
-    margin: 10px;
+    margin: 0 10px;
     text-align: center;
 }
 
@@ -77,16 +76,4 @@ body {
 video {
     width: 100%;
     height: auto;
-}
-
-@media screen and (max-width: 768px) {
-    .icon-row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .icon {
-        margin: 10px 0;
-    }
 }
