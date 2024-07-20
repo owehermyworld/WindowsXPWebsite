@@ -275,3 +275,34 @@ a {
     height: 20px;
     margin: 0 5px;
 }
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    body {
+        background: url('img/bliss.png') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .icon {
+        width: 25%;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .icon img.icon {
+        width: 50px;
+        height: auto;
+    }
+
+    .icon-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 10px;
+    }
+
+    .blank {
+        display: none;
+    }
+}
