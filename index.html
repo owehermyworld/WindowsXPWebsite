@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="jquery.min.js"></script>
     <script src="script.js"></script>
@@ -67,11 +69,10 @@
         <a href="https://www.youtube.com/watch?v=G9f3Ajx8a30&list=PLl3RuQg_dI-cCweKXArSg-gYrD4aBtnn2&pp=iAQB"><img class="icon" src="img/FOLDER.png"></a><br />
         eventz and meetz
     </div>
-        <div class="icon">
+    <div class="icon">
         <a href="https://www.youtube.com/watch?v=J7PdyT3HLGw&list=PLl3RuQg_dI-c_uCBLyIH2C4vaJJNUDPcs&pp=iAQB"><img class="icon" src="img/FOLDER.png"></a><br />
         tape dumps
     </div>
-
 
     <!-- Fourth Row -->
     <br />
@@ -166,26 +167,56 @@
         </div>
     </div>
 
-    <!-- The Picture Viewer Modal -->
+    <!-- Picture Viewer Modal -->
     <div id="pictureViewerModal" class="modal">
-        <div class="modal-header" id="pictureViewerHeader">
-            <span class="close" id="closePictureViewer">&times;</span>
-            <span>smxd_c.ico - Windows Picture and Fax Viewer</span>
-        </div>
-        <div class="modal-body">
-            <span>No preview available.</span>
-        </div>
-        <div class="modal-footer">
-            <div class="toolbar">
-                <img src="img/prev.png" alt="Previous">
-                <img src="img/play.png" alt="Play">
-                <img src="img/next.png" alt="Next">
-                <img src="img/zoom-in.png" alt="Zoom In">
-                <img src="img/zoom-out.png" alt="Zoom Out">
-                <img src="img/delete.png" alt="Delete">
-                <img src="img/info.png" alt="Info">
-            </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="" alt="Picture">
         </div>
     </div>
+    
+    <script>
+        // JavaScript for modals and interactivity
+        $(document).ready(function() {
+            // Media Player Modal
+            var mediaPlayerModal = $('#mediaPlayerModal');
+            var mediaPlayerBtn = $('#mediaPlayerBtn');
+            var mediaPlayerSpan = $('.modal .close');
+
+            mediaPlayerBtn.click(function() {
+                mediaPlayerModal.show();
+            });
+
+            mediaPlayerSpan.click(function() {
+                mediaPlayerModal.hide();
+            });
+
+            $(window).click(function(event) {
+                if ($(event.target).is(mediaPlayerModal)) {
+                    mediaPlayerModal.hide();
+                }
+            });
+
+            // Picture Viewer Modal
+            var pictureViewerModal = $('#pictureViewerModal');
+            var pictureViewerBtn = $('#pictureViewerBtn');
+            var pictureViewerSpan = pictureViewerModal.find('.close');
+
+            pictureViewerBtn.click(function() {
+                pictureViewerModal.show();
+                $('#modal-img').attr('src', 'path/to/your/image.jpg'); // Update with your image path
+            });
+
+            pictureViewerSpan.click(function() {
+                pictureViewerModal.hide();
+            });
+
+            $(window).click(function(event) {
+                if ($(event.target).is(pictureViewerModal)) {
+                    pictureViewerModal.hide();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
