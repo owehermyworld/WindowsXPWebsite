@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url('path/to/bliss.png'); /* Set your background image here */
+    background-image: url('img/bliss.png'); /* Desktop background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,8 +17,12 @@ body {
     margin: 10px 0;
 }
 
-/* Keep the mobile version unchanged */
+/* Mobile Background Image */
 @media (max-width: 767px) {
+    body {
+        background-image: url('img/blissmobile.png'); /* Mobile background image */
+    }
+
     .icon-row {
         display: flex;
         flex-wrap: wrap;
