@@ -20,7 +20,7 @@ body {
 /* Mobile Background Image */
 @media (max-width: 767px) {
     body {
-        background-image: url('img/blissmobile.png'); /* Mobile background image */
+        background-image: url('img/blissmobile.jpg'); /* Mobile background image */
     }
 
     .icon-row {
