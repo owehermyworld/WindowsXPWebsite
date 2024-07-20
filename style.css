@@ -1,4 +1,66 @@
 html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url('img/bliss.png') no-repeat center center fixed; 
+    background-size: cover;
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+}
+
+.icon {
+    min-width: 80px; /* Adjusted for mobile */
+    padding: 8px; /* Adjusted for mobile */
+    display: inline-block;
+    text-align: center;
+    font-family: Tahoma, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px; /* Adjusted for readability */
+    color: white;
+    text-shadow: 2px 2px 2px black;    
+}
+
+.icon img.icon {
+    max-width: 40px; /* Adjusted for mobile */
+    height: auto;
+}
+
+.icon-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center icons horizontally */
+    gap: 10px; /* Spacing between icons */
+}
+
+.blank {
+    display: none; /* Hide blank icons on mobile */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .icon {
+        width: 20%; /* Adjusted for mobile layout */
+        margin-bottom: 10px;
+    }
+
+    .icon img.icon {
+        width: 40px; /* Adjusted for mobile */
+        height: auto;
+    }
+
+    .icon-row {
+        padding: 0 10px;
+    }
+
+    .blank {
+        display: none;
+    }
+}
+
+html {
     margin: 0px;
     height: 100%;
     width: 100%;
@@ -39,87 +101,6 @@ bodyold {
     0%{background-position:0% 82%}
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
-}
-
-body {
-    background: url('img/bliss.png') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    margin: 0px;
-    min-height: 100%;
-    width: 100%;
-}
-
-.icon {
-    min-width: 108px;
-    padding: 11px;
-    display: inline-block;
-    text-align: center;
-    font-family: Tahoma, Arial, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 12px;
-    color: white;
-    text-shadow: 2px 2px 2px black;    
-    font-smooth: never;
-    -webkit-font-smoothing : none;    
-}
-
-.iconrow {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: default;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.shortcut {
-    position: absolute;
-    min-width: 58px;
-    max-width: 58px;
-}
-
-.container .gallery a img {
-    float: left;
-    width: 20%;
-    height: auto;
-    border: 2px solid #fff;
-    -webkit-transition: -webkit-transform .15s ease;
-    -moz-transition: -moz-transform .15s ease;
-    -o-transition: -o-transform .15s ease;
-    -ms-transition: -ms-transform .15s ease;
-    transition: transform .15s ease;
-    position: relative;
-}
-
-.container .gallery a:hover img {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-    z-index: 5;
-}
-
-.clear {
-    clear: both;
-    float: none;
-    width: 100%;
-}
-
-img.icon {
-    min-width: 50px;
-    max-width: 50px;
-    padding: 6px;
-}
-
-a {
-    cursor: default;
 }
 
 .wrapper { 
@@ -200,51 +181,6 @@ a {
     margin: 0 5px;
 }
 
-.blank {
-    min-width: 108px;
-    padding: 11px;
-    display: inline-block;
-}
-
-.icon-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.fade-in {
-    -webkit-animation: fadeIn 2s ease;
-    -moz-animation: fadeIn ease-in-out 2s both;
-    -ms-animation: fadeIn ease-in-out 2s both;
-    -o-animation: fadeIn ease-in-out 2s both;
-    animation: fadeIn 2s ease;
-    visibility: visible;
-    -webkit-backface-visibility: hidden;
-}
-
-@-webkit-keyframes fadeIn {0% {opacity:0;} 100% {opacity:1;}}
-@-moz-keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
-@-o-keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
-@keyframes fadeIn {0% {opacity:0} 100% {opacity:1}}
-
-.video-js .vjs-control-bar {
-    background-color: #333;
-}
-
-.video-js .vjs-play-progress,
-.video-js .vjs-volume-level {
-    background-color: #666;
-}
-
-.video-js .vjs-load-progress {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.video-js .vjs-seek-handle,
-.video-js .vjs-volume-handle {
-    display: none;
-}
-
 #pictureViewerModal .modal-header {
     background: #4a90e2;
     color: #fff;
@@ -284,14 +220,12 @@ a {
     }
 
     .icon {
-        width: 25%;
-        display: inline-block;
-        text-align: center;
+        width: 20%; /* Adjusted for mobile layout */
         margin-bottom: 10px;
     }
 
     .icon img.icon {
-        width: 50px;
+        width: 40px; /* Adjusted for mobile */
         height: auto;
     }
 
@@ -306,3 +240,4 @@ a {
         display: none;
     }
 }
+
